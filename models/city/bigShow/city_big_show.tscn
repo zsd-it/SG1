@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr4m1ri1myk3c"]
+
+[ext_resource type="Script" path="res://models/city/bigShow/city_big_show.gd" id="1_goiur"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2n0a1"]
+resource_name = "城市大地图图标"
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"cityBigShow",
+"speed": 5.0
+}]
+
+[node name="cityBigShow" type="Node2D"]
+script = ExtResource("1_goiur")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_2n0a1")
+animation = &"cityBigShow"
+
+[node name="bigCity" type="CanvasGroup" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

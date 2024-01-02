@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://budtwjavscexi"]
+
+[ext_resource type="Texture2D" uid="uid://d2ipahg4fd2up" path="res://models/maps/data/china.png" id="1_1d37t"]
+[ext_resource type="Script" path="res://models/maps/bigMaps/big_map.gd" id="1_cqw2o"]
+[ext_resource type="LabelSettings" uid="uid://cnnxfroar7c0h" path="res://models/pkg/same/fontLaber.tres" id="3_ml073"]
+
+[node name="bigMap" type="Node2D"]
+script = ExtResource("1_cqw2o")
+
+[node name="China" type="Sprite2D" parent="."]
+position = Vector2(302, 202)
+texture = ExtResource("1_1d37t")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Timer" type="Timer" parent="HUD"]
+
+[node name="GameTime" type="CanvasLayer" parent="."]
+
+[node name="YearMonth" type="Label" parent="GameTime"]
+offset_left = 40.0
+offset_top = 16.0
+offset_right = 138.0
+offset_bottom = 43.0
+size_flags_horizontal = 4
+text = "189 年     1 月"
+label_settings = ExtResource("3_ml073")
